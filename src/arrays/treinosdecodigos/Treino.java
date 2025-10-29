@@ -1,4 +1,4 @@
-package treinosdecodigos;
+package arrays.treinosdecodigos;
 
 public class Treino {
 

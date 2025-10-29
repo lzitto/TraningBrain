@@ -1,17 +1,15 @@
+package challengeDungeonProg;
 import java.util.Scanner;
-/*
- * 
- */
-public class BeC1002 {
+
+public class Level02CirculoCabalistico {
     public static void main(String[] args) throws Exception {
         Scanner sc = new Scanner(System.in);  // cria o scanner, utilizamos isso pra dizer que em java vou dar uma entrada via teclado
-   
 
         double n = 3.14159;
         double raio = sc.nextDouble();
         double area = n * (raio * raio);
 
-        System.out.printf("A=%.4f\n " , area);
+        System.out.printf("A=%.4f\n" , area);
 
     }
 }

@@ -1,0 +1,210 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "BeC1010",
+            "request": "launch",
+            "mainClass": "beCrowdTrain.BeC1010",
+            "projectName": "TraningBrain_1731dc7b"
+        },
+        {
+            "type": "java",
+            "name": "BeC1006",
+            "request": "launch",
+            "mainClass": "beCrowdTrain.BeC1006",
+            "projectName": "TraningBrain_1731dc7b"
+        },
+        {
+            "type": "java",
+            "name": "BeC1012",
+            "request": "launch",
+            "mainClass": "beCrowdTrain.BeC1012",
+            "projectName": "TraningBrain_1731dc7b"
+        },
+        {
+            "type": "java",
+            "name": "BeC1011",
+            "request": "launch",
+            "mainClass": "beCrowdTrain.BeC1011",
+            "projectName": "TraningBrain_1731dc7b"
+        },
+        {
+            "type": "java",
+            "name": "BeC1009",
+            "request": "launch",
+            "mainClass": "beCrowdTrain.BeC1009",
+            "projectName": "TraningBrain_1731dc7b"
+        },
+        {
+            "type": "java",
+            "name": "Level02CirculoCabalistico",
+            "request": "launch",
+            "mainClass": "missoesbeecrowdRPGdaprogramacao.Level02CirculoCabalistico",
+            "projectName": "TraningBrain_1731dc7b"
+        },
+        {
+            "type": "java",
+            "name": "Level01CanoneRudimentar",
+            "request": "launch",
+            "mainClass": "missoesbeecrowdRPGdaprogramacao.Level01CanoneRudimentar",
+            "projectName": "TraningBrain_1731dc7b"
+        },
+        {
+            "type": "java",
+            "name": "Level02CirculoCabalistico",
+            "request": "launch",
+            "mainClass": "missoesbeecrowdRPGdaprogramacao.fase1camaradosneofitos.Level02CirculoCabalistico",
+            "projectName": "TraningBrain_1731dc7b"
+        },
+        {
+            "type": "java",
+            "name": "CirculoCabalistico",
+            "request": "launch",
+            "mainClass": "missoesbeecrowdRPGdaprogramacao.fase1camaradosneofitos.CirculoCabalistico",
+            "projectName": "TraningBrain_1731dc7b"
+        },
+        {
+            "type": "java",
+            "name": "CumprimentandoOMundo",
+            "request": "launch",
+            "mainClass": "missoesbeecrowdRPGdaprogramacao.CumprimentandoOMundo",
+            "projectName": "TraningBrain_1731dc7b"
+        },
+        {
+            "type": "java",
+            "name": "CumprimentandoOMundo",
+            "request": "launch",
+            "mainClass": "CumprimentandoOMundo",
+            "projectName": "TraningBrain_1731dc7b"
+        },
+        {
+            "type": "java",
+            "name": "ExcelFinanceiro",
+            "request": "launch",
+            "mainClass": "controleFinanceiroTibia.ExcelFinanceiro",
+            "projectName": "TraningBrain_1731dc7b"
+        },
+        {
+            "type": "java",
+            "name": "ExcelComGraficos",
+            "request": "launch",
+            "mainClass": "controleFinanceiroTibia.ExcelComGraficos",
+            "projectName": "TraningBrain_1731dc7b"
+        },
+        {
+            "type": "java",
+            "name": "HuntCalculator",
+            "request": "launch",
+            "mainClass": "controleFinanceiroTibia.HuntCalculator",
+            "projectName": "TraningBrain_1731dc7b"
+        },
+        {
+            "type": "java",
+            "name": "HuntTrackerGUI",
+            "request": "launch",
+            "mainClass": "controleFinanceiroTibia.HuntTrackerGUI",
+            "projectName": "TraningBrain_1731dc7b"
+        },
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "BeC1001",
+            "request": "launch",
+            "mainClass": "BeC1001",
+            "projectName": "TraningBrain_1731dc7b"
+        },
+        {
+            "type": "java",
+            "name": "BeC1002",
+            "request": "launch",
+            "mainClass": "BeC1002",
+            "projectName": "TraningBrain_1731dc7b"
+        },
+        {
+            "type": "java",
+            "name": "BeC1003",
+            "request": "launch",
+            "mainClass": "BeC1003",
+            "projectName": "TraningBrain_1731dc7b"
+        },
+        {
+            "type": "java",
+            "name": "BeC1004",
+            "request": "launch",
+            "mainClass": "BeC1004",
+            "projectName": "TraningBrain_1731dc7b"
+        },
+        {
+            "type": "java",
+            "name": "BeC1005",
+            "request": "launch",
+            "mainClass": "BeC1005",
+            "projectName": "TraningBrain_1731dc7b"
+        },
+        {
+            "type": "java",
+            "name": "BeC1006",
+            "request": "launch",
+            "mainClass": "BeC1006",
+            "projectName": "TraningBrain_1731dc7b"
+        },
+        {
+            "type": "java",
+            "name": "BeC1008",
+            "request": "launch",
+            "mainClass": "BeC1008",
+            "projectName": "TraningBrain_1731dc7b"
+        },
+        {
+            "type": "java",
+            "name": "BeC1010",
+            "request": "launch",
+            "mainClass": "BeC1010",
+            "projectName": "TraningBrain_1731dc7b"
+        },
+        {
+            "type": "java",
+            "name": "BeC1041",
+            "request": "launch",
+            "mainClass": "BeC1041",
+            "projectName": "TraningBrain_1731dc7b"
+        },
+        {
+            "type": "java",
+            "name": "Arrays",
+            "request": "launch",
+            "mainClass": "arrays.Arrays",
+            "projectName": "TraningBrain_1731dc7b"
+        },
+        {
+            "type": "java",
+            "name": "ForElementos",
+            "request": "launch",
+            "mainClass": "arrays.ForElementos",
+            "projectName": "TraningBrain_1731dc7b"
+        },
+        {
+            "type": "java",
+            "name": "fluxoDeControle",
+            "request": "launch",
+            "mainClass": "controleFinanceiroTibia.fluxoDeControle",
+            "projectName": "TraningBrain_1731dc7b"
+        },
+        {
+            "type": "java",
+            "name": "Treino",
+            "request": "launch",
+            "mainClass": "treinosdecodigos.Treino",
+            "projectName": "TraningBrain_1731dc7b"
+        }
+    ]
+}

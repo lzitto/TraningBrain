@@ -1,3 +1,4 @@
+package beCrowdTrain;
 import java.util.Scanner;
 
 public class BeC1008 {

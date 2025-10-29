@@ -1,3 +1,4 @@
+package beCrowdTrain;
 import java.util.Scanner;
 /*
  * o legal é que posso usar isso como fonte de desabafo né, caralho vei porque as coisas tem que ser desse jeito ??

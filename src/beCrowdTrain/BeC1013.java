@@ -5,11 +5,11 @@ public class BeC1013 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);  
         
-        double a = sc.nextInt();
-        double b = sc.nextInt();
+        double x = sc.nextInt();
+        double y = sc.nextInt();
         double c = sc.nextInt();
         
-        int maiorAB = (a+b+abs(a-b))/2;
+        int maiorAB = (x+y+abs(x,y))/2;
         // essa variavel carrega apenas o resultado esperado dos 2 primeiso valores
         /*
          * para verificar um c precisamos checar tbm.
@@ -23,5 +23,12 @@ public class BeC1013 {
          * seria ela ( humm pensamento aleatorio, lebtmando eu agora que nao estou lendo meu livro)
          */
         
+    }
+    public int abs(int x, int y) {
+        int resp =  x - y;
+        if(resp < 0) {
+            resp *= 1;
+        }
+        return resp;
     }
 }

@@ -2,7 +2,10 @@ package arrays.treinosdecodigos;
 
 public class Media {
     public static void main(String[] args) {
-         
+        
+        double[] a = {2, 4, 6, 8, 10};
+        double[] m = new double[a.length];
+        
         somaExt(a,0,a.length-1, m);
     }
     
@@ -22,8 +25,8 @@ public class Media {
         double soma = 0;
         if(l == r) {
             soma = a[l];
-            soma = a[l] + somaInt(a, l+1, r);
         }
+        soma = a[l] + somaInt(a, l+1, r);
         return soma;
     }
 

@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "BeC1002",
+            "request": "launch",
+            "mainClass": "beCrowdTrain.BeC1002",
+            "projectName": "TraningBrain_1731dc7b"
+        },
+        {
+            "type": "java",
+            "name": "BeC1001",
+            "request": "launch",
+            "mainClass": "beCrowdTrain.BeC1001",
+            "projectName": "TraningBrain_1731dc7b"
+        },
+        {
+            "type": "java",
+            "name": "BeC1013",
+            "request": "launch",
+            "mainClass": "beCrowdTrain.BeC1013",
+            "projectName": "TraningBrain_1731dc7b"
+        },
+        {
+            "type": "java",
             "name": "BeC1014",
             "request": "launch",
             "mainClass": "beCrowdTrain.BeC1014",

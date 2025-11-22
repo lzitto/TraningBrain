@@ -1,15 +1,18 @@
 package beCrowdTrain;
 import java.util.Scanner;
 
-public class BeC1013 {
+public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);  
         
-        double x = sc.nextInt();
-        double y = sc.nextInt();
-        double c = sc.nextInt();
+        int x = sc.nextInt();
+        int y = sc.nextInt();
+        int z = sc.nextInt();
+        //double c = sc.nextInt();
         
         int maiorAB = (x+y+abs(x,y))/2;
+        int maiorABC = (maiorAB+z+abs(maiorAB, z))/2;
+        
         // essa variavel carrega apenas o resultado esperado dos 2 primeiso valores
         /*
          * para verificar um c precisamos checar tbm.
@@ -22,13 +25,19 @@ public class BeC1013 {
          * mas tem uma oreação atribuida a ela sabe, 
          * seria ela ( humm pensamento aleatorio, lebtmando eu agora que nao estou lendo meu livro)
          */
-        
+
+        //esse print é só ptra testar a função
+        //System.out.println(abs(x,y));  
+
+        System.out.println(maiorABC + " eh o maior");                   
     }
-    public int abs(int x, int y) {
-        int resp =  x - y;
+
+    // criação da função abs feita com sucesso, creio eu...pelos meus testes
+    public static int abs(int x, int y){
+        int resp = x - y;
         if(resp < 0) {
-            resp *= 1;
+            resp *= -1;
         }
         return resp;
-    }
+    }  
 }

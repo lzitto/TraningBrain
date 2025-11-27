@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "BeC1016",
+            "request": "launch",
+            "mainClass": "beCrowdTrain.BeC1016",
+            "projectName": "TraningBrain_1731dc7b"
+        },
+        {
+            "type": "java",
             "name": "BeC1015",
             "request": "launch",
             "mainClass": "beCrowdTrain.BeC1015",

@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Arrays",
+            "request": "launch",
+            "mainClass": "arrays.Arrays",
+            "projectName": "TraningBrain_3f369500"
+        },
+        {
+            "type": "java",
+            "name": "BeC1017",
+            "request": "launch",
+            "mainClass": "beCrowdTrain.BeC1017",
+            "projectName": "TraningBrain_3f369500"
+        },
+        {
+            "type": "java",
             "name": "BeC1016",
             "request": "launch",
             "mainClass": "beCrowdTrain.BeC1016",

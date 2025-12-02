@@ -4,6 +4,9 @@ eu não quero mais não ho, ficar falando coisas que naõ sou eu, deixar de faze
 
 "Começa agora a saga de um guerreiro ambulante e andarilho em busca de um senso de consciência e verdade"
 
+// Link dos set de Joao Arthur pra EDA: 
+youtube.com/watch?v=UgAaHi5zhEo&list=PLExFLog8AjXjePIjfKg_t-I3ZJ6qSv1MY
+
 🧭 100 Missões BeeCrowd – RPG da Programação
 
 🧙 Fase 1 – Câmara dos Neófitos (níveis 0–19) ::Foco:: entrada, saída, operadores, lógica básica

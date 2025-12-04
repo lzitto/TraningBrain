@@ -20,11 +20,11 @@ Level | Código | Missão                                                 | Stat
 9     | 1009   | Salário com Encantamento				| LevelUP|
 10    | 1010   | Transação Mística					| LevelUP|
 11    | 1011   | A Esfera do Saber					| LevelUP|
-12    | 1012   | O Pentagrama da Área
-13    | 1013   | O Maior dos Antigos
-14    | 1014   | Combustão Sagrada
-15    | 1015   | Runa da Distância
-16    | 1016   | A Caçada
+12    | 1012   | O Pentagrama da Área					| LevelUP|
+13    | 1013   | O Maior dos Antigos					| LevelUP|
+14    | 1014   | Combustão Sagrada					| LevelUP|
+15    | 1015   | Runa da Distância					| LevelUP|
+16    | 1016   | A Caçada						| LevelUP|
 17    | 1017   | Gasto Etéreo
 18    | 1018   | O Tesouro de Cédulas
 19    | 1020   | Calendário Arcano

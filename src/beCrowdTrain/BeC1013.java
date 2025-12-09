@@ -31,7 +31,7 @@ public class BeC1013 {
         System.out.println(maiorABC + " eh o maior");                   
     }
 
-    // criação da função abs feita com sucesso, creio eu...pelos meus testes
+    // criação da função abs feita com sucesso, creio eu...pelos meus testeskeigzq
     public static int abs(int x, int y){
         int resp = x - y;
         if(resp < 0) {

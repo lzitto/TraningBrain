@@ -1,4 +1,4 @@
-package controleFinanceiroTibia;
+
 import java.util.Scanner;
 
 public class fluxoDeControle {

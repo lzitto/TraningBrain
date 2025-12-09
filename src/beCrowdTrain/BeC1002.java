@@ -1,4 +1,4 @@
-package beCrowdTrain;
+
 import java.util.Scanner;
 /*
  * 

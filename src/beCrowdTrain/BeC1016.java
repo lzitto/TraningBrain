@@ -8,7 +8,7 @@ public class BeC1016 {
         int km = sc.nextInt();
         int dist = Math.abs(km * 2);
 
-        System.out.println(dist);
+        System.out.println(dist + " minutos");
 
     }
 }

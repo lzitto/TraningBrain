@@ -6,6 +6,7 @@
     "configurations": [
         {
             "type": "java",
+<<<<<<< HEAD
             "name": "Arrays",
             "request": "launch",
             "mainClass": "arrays.Arrays",
@@ -17,6 +18,33 @@
             "request": "launch",
             "mainClass": "beCrowdTrain.BeC1017",
             "projectName": "TraningBrain_3f369500"
+=======
+            "name": "BeC1012",
+            "request": "launch",
+            "mainClass": "beCrowdTrain.BeC1012",
+            "projectName": "TraningBrainLast_39cd2db1"
+        },
+        {
+            "type": "java",
+            "name": "BeC1013",
+            "request": "launch",
+            "mainClass": "beCrowdTrain.BeC1013",
+            "projectName": "TraningBrainLast_39cd2db1"
+        },
+        {
+            "type": "java",
+            "name": "BeC1002",
+            "request": "launch",
+            "mainClass": "beCrowdTrain.BeC1002",
+            "projectName": "TraningBrainLast_39cd2db1"
+        },
+        {
+            "type": "java",
+            "name": "BeC1008",
+            "request": "launch",
+            "mainClass": "beCrowdTrain.BeC1008",
+            "projectName": "TraningBrain_1731dc7b"
+>>>>>>> 79c2e1213a01b63bcba97980e377b8fdecbd366c
         },
         {
             "type": "java",

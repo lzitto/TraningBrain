@@ -1,4 +1,4 @@
-package beCrowdTrain;
+
 import java.util.Scanner;
 /*
  * aqui teremos algumas implementações sobre o exercicio

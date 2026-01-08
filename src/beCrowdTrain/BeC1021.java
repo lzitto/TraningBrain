@@ -37,7 +37,7 @@ public class BeC1021 {
         n = n % 1;
         System.out.println(notaDe1 + " nota(s) de R$ 1,00");
         
-        sc.close();
+        sc.lose();
         
 
 =======

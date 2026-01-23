@@ -17,7 +17,7 @@ public class BeC1021 {
         int notaDe100 = notas / 100;
         n = n % 100;
         System.out.println(notaDe100 + " nota(s) de R$ 100,00");
-<<<<<<< HEAD
+
         int notaDe50 = n / 50;
         n = n % 50;
         System.out.println(notaDe50 + " nota(s) de R$ 50,00");
@@ -36,13 +36,7 @@ public class BeC1021 {
         int notaDe1 = n / 1;
         n = n % 1;
         System.out.println(notaDe1 + " nota(s) de R$ 1,00");
-        
-        sc.lose();
-        
-
-=======
     
->>>>>>> dd42728fc8a573e801d7ab6f0c57a768d4c78f68
 
     }
 }

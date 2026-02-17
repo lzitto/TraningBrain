@@ -1,4 +1,5 @@
-public class livro {
+
+public class Livro {
 
     private String titulo;
     private String autor;
@@ -7,12 +8,14 @@ public class livro {
     private boolean lido;
     private int nota;
     
-    public livro(String titulo, String autor, int ano, String genero, boolean lido, int nota) {
+    public Livro(String titulo, String autor) {
         this.titulo = titulo;
         this.autor = autor;
-        this.ano = ano;
-        this.genero = genero;
-        this.lido = lido;
-        this.nota = nota;
+    }
+
+    @Override
+    public String toString() {
+        return "Livro [titulo=" + titulo + ", autor=" + autor + "]";
     }   
+
 }

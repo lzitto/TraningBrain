@@ -136,5 +136,9 @@ Level | Código | Missão                                                | Statu
 98    | 2057   | Fuso Temporal
 99    | 2061   | Teclado Quebrado
 
+|| -- ~~ TIBIA ~~ -- || 
+02/02/2026: 4.113k 
+
+
 
 

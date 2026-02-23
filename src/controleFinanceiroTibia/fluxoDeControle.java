@@ -8,9 +8,9 @@ public class fluxoDeControle {
         Scanner sc = new Scanner(System.in);
     
         // variaveis constantes para tempo de execução
-        double imb = 113.00;
-        double precoKK = 10470.00;
-        double precoTC = 55.00;
+        double imb = 143.00;
+        double precoKK = 10770.00;
+        double precoTC = 50.00;
 
         //Entradas de dados
         int seasson =  sc.nextInt();

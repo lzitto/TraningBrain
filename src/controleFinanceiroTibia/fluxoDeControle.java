@@ -1,5 +1,9 @@
 
 import java.util.Scanner;
+/*
+esse programa segue um fluxo onde precisamos atualizar os dados sempre que vamos fazer
+uma nova operacao com variaves novas.
+*/
 
 public class fluxoDeControle {
 
@@ -8,9 +12,9 @@ public class fluxoDeControle {
         Scanner sc = new Scanner(System.in);
     
         // variaveis constantes para tempo de execução
-        double imb = 113.00;
-        double precoKK = 10470.00;
-        double precoTC = 55.00;
+        double imb = 130.00;
+        double precoKK = 10700.00;
+        double precoTC = 48.00;
 
         //Entradas de dados
         int seasson =  sc.nextInt();

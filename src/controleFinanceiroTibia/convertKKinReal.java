@@ -8,7 +8,6 @@ public class convertKKinReal {
         preco do tc ta 42259 k cada unidade
         o site ta pagando 54,65 por 250 com taxa fixa de 4 reais por transição
         esse ainda eh o q melhor paga e tbm o que demora + a pagar, talvez ...
-    
         */
         System.out.println("Insira quantos TC venderá: ");
         double quantTc = sc.nextDouble();
@@ -18,5 +17,5 @@ public class convertKKinReal {
         double valorReceber = ((quantTc/250) * precoTc);
         System.out.printf("Valor total a receber da venda: %.2f\n", valorReceber);
     
-    }    
+    }
 }

@@ -8,19 +8,17 @@ uma nova operacao com variaves novas.
 public class fluxoDeControle {
 
     public static void main(String[] args) {
-        System.out.println("::--->> Controle de flutuação e transmutação de dinhero <<---::");
         Scanner sc = new Scanner(System.in);
     
+        System.out.println("::--->> Controle de flutuação e transmutação de dinhero <<---::");
         // variaveis constantes para tempo de execução
-<<<<<<< HEAD
+
         double imb = 130.00;
         double precoKK = 10700.00;
-        double precoTC = 48.00;
-=======
+        double precoTC = 51.00;
         double imb = 143.00;
         double precoKK = 10770.00;
         double precoTC = 50.00;
->>>>>>> 4f6005608de11ed1f1b10a9aaf2a1ded5906b302
 
         //Entradas de dados
         int seasson =  sc.nextInt();

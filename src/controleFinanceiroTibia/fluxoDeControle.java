@@ -13,23 +13,22 @@ public class fluxoDeControle {
         System.out.println("::--->> Controle de flutuação e transmutação de dinhero <<---::");
         // variaveis constantes para tempo de execução
 
-        double imb = 130.00;
+        double wastTotal = 492.00;
         double precoKK = 10700.00;
         double precoTC = 51.00;
-        double imb = 143.00;
-        double precoKK = 10770.00;
-        double precoTC = 50.00;
 
         //Entradas de dados
+        System.out.println(":: Digite quantos minutos você caçou >> ");
         int seasson =  sc.nextInt();
+        System.out.println(":: Digite quantos de profit você fez >> ");
         int balance = sc.nextInt();
         
         //Operacoes ou metodos pra usar
-        double custoImb = ((imb * seasson)/60);
+        double custoImb = ((wastTotal * seasson)/60);
         double profitHunt = ((balance - custoImb ) * precoTC)/precoKK; 
     
         //Impressoes do que está aconecendo 
-        System.out.printf("Gasto do imbui: %.2f\n", custoImb);
+    
         System.out.printf("Valor feito em $$ Total da huntUnitaria: %.2f\n", profitHunt); 
 
         sc.close();

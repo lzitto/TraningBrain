@@ -1,4 +1,4 @@
-package arrays;
+
 
 public class ForElementos {
     public static void main(String[] args) {

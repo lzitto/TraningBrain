@@ -1,0 +1,95 @@
+# 🧭 RPG da Programação — Marcos e Bosses
+
+---
+
+## 🔓 Level 20 — Entrada na Tumba dos Vetores
+
+### 🐍 Mini Boss
+- 1038 – Lanche (BeeCrowd)
+- 1045 – Tipos de Triângulos (BeeCrowd)
+- Java Arraylist (HackerRank)
+
+### 👑 Final Boss
+- Two Sum (LeetCode)
+
+### 🎯 Foco
+- if/else mais complexo  
+- indexação em array  
+- leitura de input  
+
+---
+
+## 🔓 Level 40 — Estruturas
+
+### 🐍 Mini Boss
+- 1174 – Seleção em Vetor (BeeCrowd)
+- 1188 – Área Inferior (BeeCrowd)
+- Java List (HackerRank)
+
+### 👑 Final Boss
+- Valid Parentheses (LeetCode)
+
+### 🎯 Foco
+- arrays + loops  
+- padrões básicos  
+- noção de pilha  
+
+---
+
+## 🔓 Level 60 — Recursão
+
+### 🐍 Mini Boss
+- 1259 – Pares e Ímpares (BeeCrowd)
+- 1068 – Pares entre Cinco Números (BeeCrowd)
+- Java Generics (HackerRank)
+
+### 👑 Final Boss
+- Binary Search (LeetCode)
+
+### 🎯 Foco
+- ordenação  
+- generics  
+- divisão de problema  
+
+---
+
+## 🔓 Level 80 — Algoritmos
+
+### 🐍 Mini Boss
+- 1435 – Matriz Quadrada I (BeeCrowd)
+- 1478 – Matriz Quadrada II (BeeCrowd)
+- Comparator (HackerRank)
+
+### 👑 Final Boss
+- Merge Sorted Array (LeetCode)
+
+### 🎯 Foco
+- comparator  
+- matriz  
+- merge  
+
+---
+
+## 🔓 Level 100 — Ascensão
+
+### 🐍 Mini Boss
+- 1551 – Frase Completa (BeeCrowd)
+- 1234 – Sentença Dançante (BeeCrowd)
+- Java Strings (HackerRank)
+
+### 👑 Final Boss
+- Longest Substring Without Repeating Characters (LeetCode)
+
+### 🎯 Foco
+- strings  
+- sliding window  
+- otimização  
+
+---
+
+## ⚔️ Regras do Jogo
+
+1. Tentar sozinho (15–40 min)  
+2. Quebrar o problema  
+3. Ver ideia se travar  
+4. Reimplementar do zero  

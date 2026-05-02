@@ -1,9 +1,7 @@
 {
     "java.project.sourcePaths": [
-        "src/controleFinanceiroTibia",
-        "src/beCrowdTrain",
-        "src/arrays/treinosdecodigos",
-        "src/main/arrays"
+        "src/main/arrays",
+        "src/main/beCrowdTrain"
     ],
     "java.project.outputPath": "bin",
     "java.project.referencedLibraries": [

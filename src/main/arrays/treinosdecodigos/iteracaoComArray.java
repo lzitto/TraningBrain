@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class iteracaoComArray {
     public static void main(String[] args) {
-                Scanner sc = new Scanner(System.in);  // cria o scanner, utilizamos isso pra dizer que em java vou dar uma entrada via teclado
+        Scanner sc = new Scanner(System.in);  // cria o scanner, utilizamos isso pra dizer que em java vou dar uma entrada via teclado
 
         int[] listaDeNum = {1,2,3,4,5,6,7};
         int n = 3;

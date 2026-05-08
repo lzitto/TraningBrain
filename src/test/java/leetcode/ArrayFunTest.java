@@ -16,5 +16,13 @@ public class ArrayFunTest {
         assertEquals(3, resultado);
     }
 
+    @Test
+    void testBubbleSort() {
+         int[] v = {5,4,3,2,1};
+
+         int[] resultado = {1,2,3,4,5};
+         ArrayFun.bubbleSort(v);
+         assertArrayEquals(resultado, v);
+    }
     
 }

@@ -1,3 +1,4 @@
+package hackerRank;
 import java.util.Scanner;
 
 public class DataType2 {
@@ -13,7 +14,9 @@ public class DataType2 {
         sc.nextLine();
         s = sc.nextLine();      
         
-        System.out.println(i + " :: " + d +"::"+ s);
+        System.out.println(i+4);
+        System.out.println(d+4.0);
+        System.out.println("HackerRank "+ s);
 
         
     }    

@@ -61,6 +61,7 @@ public class LeonamPlayground {
         System.out.println(Arrays.deepToString(matriz));
 
         desenharMatriz(matriz);
+        somaValores(2, 11);
     }
 
     /**
@@ -119,4 +120,10 @@ public class LeonamPlayground {
             System.out.println();
         }
     }
+
+    public static int somaValores(int i, int k) {
+        int soma = i+k;
+        return soma;
+    }
+
 }

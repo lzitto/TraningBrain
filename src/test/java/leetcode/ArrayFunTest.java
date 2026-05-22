@@ -25,4 +25,17 @@ public class ArrayFunTest {
          assertArrayEquals(resultado, v);
     }
     
+    @Test
+
+        void testSoma(){
+            int i = -2;
+            int k = 11;
+
+            int result = arrays.LeonamPlayground.somaValores(i, k);
+            
+            assertEquals(9, result);
+            assertEquals(10, result); // teste propositalmente dando errado
+            
+        }
+
 }

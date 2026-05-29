@@ -40,7 +40,7 @@ public class ArrayFun {
     // ---###---### ---- ### ----// ---###---### ---- ### ----// ---###---### ---- ### ----// ---###---### ---- ### ----
     public static int[] duplicaArray(int[] v) {
         int[] ans = new int[v.length*2];
-        for(int i = 0; i < ans)
+        for(int i = 0; i < ans);
     }
 
     // -#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#
@@ -54,6 +54,18 @@ public class ArrayFun {
                     int aux = arr[i];
                     arr[i] = arr[i+1];
                     arr[i+1] = aux;
+                    }
+                }
+            }
+    }
+
+     public static void bubbleSort(int[] v) {
+        for (int i = 0; i < v.length - 1; i++) {
+            for (int j = 0; j < v.length - 1 - i; j++) {
+                if (v[j] > v[j+1]) {
+                    int aux = v[j];
+                    v[j] = v[j+1];
+                    v[j+1] = aux;
                 }
             }
         }
@@ -68,5 +80,4 @@ public class ArrayFun {
             n--;
         }
     }
-
 }

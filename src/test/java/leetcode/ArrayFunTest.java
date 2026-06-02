@@ -6,6 +6,8 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
+import arrays.secretboxpapers.ChamaSoUmzin;
+
 public class ArrayFunTest {
 
     @Test
@@ -59,7 +61,7 @@ public class ArrayFunTest {
         int i = -2;
         int k = 11;
 
-        int result = arrays.DlzittoPlayground.somaValores(i, k);
+        int result = arrays.secretboxpapers.DlzittoPlayground.somaValores(i, k);
 
         assertEquals(9, result);
         // assertEquals(10, result); // teste propositalmente dando errado
@@ -68,8 +70,8 @@ public class ArrayFunTest {
 
     @Test
     void testFibonacciCasosBase() {
-        assertEquals(0, arrays.DlzittoPlayground.Fibonnaci(0));
-        assertEquals(1, arrays.DlzittoPlayground.Fibonnaci(1));
+        assertEquals(0, arrays.secretboxpapers.DlzittoPlayground.Fibonnaci(0));
+        assertEquals(1, arrays.secretboxpapers.DlzittoPlayground.Fibonnaci(1));
     }
 
     @ParameterizedTest
@@ -87,13 +89,13 @@ public class ArrayFunTest {
             "21, 10946"
     })
     void testFibonacciVariosValores(int entrada, int esperado) {
-        assertEquals(esperado, arrays.DlzittoPlayground.Fibonnaci(entrada));
+        assertEquals(esperado, arrays.secretboxpapers.DlzittoPlayground.Fibonnaci(entrada));
     }
 
     @Test
     void testFibonacciCasosBaseRec() {
-        assertEquals(0, arrays.DlzittoPlayground.Fibonnaci(0));
-        assertEquals(1, arrays.DlzittoPlayground.Fibonnaci(1));
+        assertEquals(0, arrays.secretboxpapers.DlzittoPlayground.Fibonnaci(0));
+        assertEquals(1, arrays.secretboxpapers.DlzittoPlayground.Fibonnaci(1));
     }
 
     @ParameterizedTest
@@ -111,7 +113,7 @@ public class ArrayFunTest {
             "21, 10946"
     })
     void testFibRecursivo(int entrada, int esperado) {
-        assertEquals(esperado, arrays.DlzittoPlayground.fibRecursivo(entrada));
+        assertEquals(esperado, arrays.secretboxpapers.DlzittoPlayground.fibRecursivo(entrada));
     }
 
     @ParameterizedTest
@@ -128,8 +130,38 @@ public class ArrayFunTest {
     })
     void testMDC(int a, int b, int esperado) {
 
-        int resultado = arrays.DlzittoPlayground.mdc(a, b);
+        int resultado = arrays.secretboxpapers.DlzittoPlayground.mdc(a, b);
 
         assertEquals(esperado, resultado);
+    }
+
+    @ParameterizedTest
+    @CsvSource({
+        "1, 0",
+        "2, 3",
+        "3, 5",
+        "4, 6",
+        "5, 9",
+        "6, 10"
+    })
+
+    void testCountLessRepetidos(int entrada, int esperado) {
+
+    Integer[] v = {1,1,1,2,2,3,4,4,4,5};
+
+    assertEquals(
+        esperado,
+        ChamaSoUmzin.countLess(v, entrada)
+    );
+}
+
+    @Test
+    void testeBrutoBScountLess() {
+        Integer entrada = 8;
+        Integer esperado = 12;
+        Integer[] m = {1,2,2,2,3,3,4,4,5};
+        Integer[] t = {2,4,5,7,7,7,7,7,7,7,7,7,8,10,12,14,16,18};
+
+        assertEquals(esperado, ChamaSoUmzin.countLess(t, entrada));
     }
 }

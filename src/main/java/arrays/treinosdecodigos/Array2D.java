@@ -1,5 +1,5 @@
 package arrays.treinosdecodigos;
-
+import java.util.Arrays;
 public class Array2D {
     public static void main(String[] args) {
         int[][] array = {{1,2,3},{4,5,6}};
@@ -11,5 +11,7 @@ public class Array2D {
             System.out.println();
         }
 
+
+        System.out.println(Arrays.deepToString(array));        
     }
 }

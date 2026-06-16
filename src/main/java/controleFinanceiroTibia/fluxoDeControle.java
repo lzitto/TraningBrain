@@ -1,4 +1,4 @@
-
+package controleFinanceiroTibia;
 import java.util.Scanner;
 /*
 esse programa segue um fluxo onde precisamos atualizar os dados sempre que vamos fazer
@@ -13,9 +13,9 @@ public class fluxoDeControle {
         System.out.println("::--->> Controle de flutuação e transmutação de dinhero <<---::");
         // variaveis constantes para tempo de execução
 
-        double wastTotal = 492.00;
-        double precoKK = 10700.00;
-        double precoTC = 51.00;
+        double wastTotal = 300.00;
+        double precoKK = 10500.00;
+        double precoTC = 50.00;
 
         //Entradas de dados
         System.out.println(":: Digite quantos minutos você caçou >> ");

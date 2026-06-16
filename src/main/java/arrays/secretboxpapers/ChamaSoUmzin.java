@@ -8,7 +8,7 @@ public class ChamaSoUmzin {
      
         Integer[] v = {2,4,5,7,7,7,7,7,7,7,7,8,10,12,14,16,18};
         System.out.println(Arrays.toString(v)); 
-        System.err.println(countLess(v, 10));
+        System.out.println(countLess(v, 10));
        
 
         

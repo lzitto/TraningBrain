@@ -1,4 +1,5 @@
 package arrays.secretboxpapers;
+
 class MyArrayList {
 
     private int[] array;

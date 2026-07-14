@@ -14,7 +14,7 @@ public class fluxoDeControle {
         System.out.println("::--->> Controle de flutuação e transmutação de dinhero <<---::");
         // variaveis constantes para tempo de execução
 
-        double wastTotal = 140.00;
+        double wastTotal = 200.00;
         double precoKK = 10500.00;
         double precoTC = 51.00;
 
@@ -36,13 +36,12 @@ public class fluxoDeControle {
 
         double x = ((balance - wastTotal) * 60)/seasson;
         System.out.println(x);
-
-    
-        System.out.println(":: Se fosse 1 hora completa nessa progressão -> ? x");
-    
+        double y = (x * precoTC)/precoKK;
+        
         //Impressoes do que está aconecendo 
-    
+        
         System.out.printf("Valor feito em $$ Total da huntUnitaria: %.2f\n", profitHunt); 
+        System.out.printf(":: Se fosse 1 hora completa nessa progressão -> ? y = %.2f\n", y);
 
         sc.close();
     }

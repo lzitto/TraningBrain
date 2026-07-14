@@ -59,7 +59,6 @@ public class prova1LEDA {
                     swap(array, j, j + 1);  // mantém o swap
             }
         }
-    
 	}
 }
     public static void swap(int[] array, int i, int j) {

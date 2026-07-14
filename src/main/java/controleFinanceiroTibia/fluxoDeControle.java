@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> f36b591 (LabLCC2: new idiea)
 package controleFinanceiroTibia;
 import java.util.Scanner;
 /*
@@ -25,7 +29,16 @@ public class fluxoDeControle {
         
         //Operacoes ou metodos pra usar
         double custoImb = ((wastTotal * seasson)/60);
-        double profitHunt = ((balance - custoImb ) * precoTC)/precoKK; 
+        double profitHunt = ((balance - custoImb ) * precoTC)/precoKK;
+
+        // o que quero é setar um valor tempo fixo, logo o imbui tbm é fixo pra essa entrada
+        // então ... papel e caneta!
+
+        // o que quero aqui é um novo metodo que de pra mim o seguinte
+        // se 40 min = 1345  então qaunto seria em 60 min  ? simples. faço pra 40 - 1345 __ 60 - x.
+
+    
+        System.out.println(":: Se fosse 1 hora completa nessa progressão -> ? x");
     
         //Impressoes do que está aconecendo 
     

@@ -13,7 +13,16 @@ public class Backpack {
 
     @Override
     public String toString() {
-        return "Backpack | array=" + Arrays.toString(array) + ", size=" + size + "]";
+        StringBuilder sb = new StringBuilder();
+    sb.append("Mochila [Itens: ").append(size).append("] -> ");
+    for (int i = 0; i < size; i++) {
+        if (array[i] != null) {
+            sb.append("[").append(i).append(": ").append(array[i].getNome()).append("] ");
+        } else {
+            sb.append("[").append(i).append(": BURAGO/NULL] "); // Excelente para pegar o bug que discutimos antes!
+        }
+    }
+    return sb.toString();
     }
 
     public void insertAt(int index, Item item) {
@@ -26,5 +35,9 @@ public class Backpack {
         }
         array[index] = item;
         size++;
+    }
+
+    public void removeAt(int index, Item item) {
+ 
     }
 }

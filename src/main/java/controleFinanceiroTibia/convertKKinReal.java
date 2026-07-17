@@ -1,3 +1,4 @@
+package controleFinanceiroTibia;
 import java.util.Scanner;
 
 public class convertKKinReal {
@@ -9,13 +10,14 @@ public class convertKKinReal {
         o site ta pagando 54,65 por 250 com taxa fixa de 4 reais por transição
         esse ainda eh o q melhor paga e tbm o que demora + a pagar, talvez ...
         */
-        System.out.println("Insira quantos TC venderá: ");
-        double quantTc = sc.nextDouble();
-        System.out.println("Preco de 250 TC: ");
-        double precoTc = sc.nextDouble();
-        System.out.println("--------------------------------------");
-        double valorReceber = ((quantTc/250) * precoTc);
-        System.out.printf("Valor total a receber da venda: %.2f\n", valorReceber);
-    
+        double k = 10500.00;
+        double real = 51.00;
+        double timeGamePlay = sc.nextDouble();
+        double imbui = (150.00 * timeGamePlay)/60;
+        double profit = sc.nextDouble()- imbui;
+        System.out.printf("var1: %.2f\n" + "var2: %.1f\n" + "var3: %.1f\n", k,real,profit);
+        
+        double profitRealLiq = ((profit-imbui) * real) / k;
+        System.out.printf("profitLiquidoReal: %.1f $$", profitRealLiq);
     }
 }

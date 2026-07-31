@@ -56,4 +56,24 @@ private int somaNosInternos(BSTNode<Integer> node) {
 
     return soma;
 }
+
+public int countSmaller(BSTNode<T> node, T element) {
+    int ans = 0;
+
+    if (node != null && !node.isEmpty() && element != null) {
+        int comp = element.compareTo(node.getData());
+
+        if (comp <= 0) {
+            // Se o elemento buscado é menor ou igual ao nó atual,
+            // os menores só podem estar na subárvore esquerda.
+            ans = countSmaller((BSTNode<T>) node.getLeft(), element);
+        } else {
+            // Se o elemento buscado é maior, o nó atual conta (+1),
+            // toda a subárvore esquerda dele conta, e continuamos buscando na direita.
+            ans = 1 + size((BSTNode<T>) node.getLeft()) 
+                    + countSmaller((BSTNode<T>) node.getRight(), element);
+        }
+    }
+
+    return ans;
 }

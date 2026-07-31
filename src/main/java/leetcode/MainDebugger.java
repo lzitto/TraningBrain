@@ -1,5 +1,7 @@
 package leetcode;
 
+import R11-01.src.main.java.adt.bst.BSTNode;
+
 public class MainDebugger {
 
     public static void main(String[] args) {
@@ -24,4 +26,34 @@ public class MainDebugger {
             System.out.println("null");
         }
     }
+}
+    public int somaNosInternos() {
+    int soma = 0;
+    if (!this.root.isEmpty()) {
+        // Inicia pelos filhos da raiz para garantir que a raiz NÃO seja somada
+        soma = somaNosInternos((BSTNode<Integer>) this.root.getLeft())
+             + somaNosInternos((BSTNode<Integer>) this.root.getRight());
+    }
+    return soma;
+}
+
+private int somaNosInternos(BSTNode<Integer> node) {
+    int soma = 0;
+
+    if (!node.isEmpty()) {
+        BSTNode<Integer> left = (BSTNode<Integer>) node.getLeft();
+        BSTNode<Integer> right = (BSTNode<Integer>) node.getRight();
+
+        // Um nó é interno se ele TIVER pelo menos um filho
+        boolean isInternal = !left.isEmpty() || !right.isEmpty();
+
+        if (isInternal) {
+            soma = node.getData()
+                 + somaNosInternos(left)
+                 + somaNosInternos(right);
+        }
+    }
+
+    return soma;
+}
 }

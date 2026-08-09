@@ -11,6 +11,6 @@ public class BeC1006 {
         double media = ((notaA * 0.2) + (notaB * 0.3)) + ((notaC * 0.5));
 
         System.out.printf("MEDIA = %.1f\n" ,  media);
-        // 
+        // test
     }
 }

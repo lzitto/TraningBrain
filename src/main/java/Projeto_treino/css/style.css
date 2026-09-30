@@ -1,0 +1,33 @@
+*{
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Source Sans Pro";
+    src: url('../fonts/SourceSansPro-Regular.otf');
+}
+
+@font-face {
+    font-family: "Source Sans Pro";
+    src: url('../fonts/SourceSansPro-Bold.otf');
+    font-weight: Bold;
+   
+}
+
+body {
+    font-family: "Source Sans Pro";
+}
+
+.cabecalho{
+    background: #ebdfdf;
+}
+
+.logo{
+    background-image: url("../img/logotipo-preto.png");
+    background-repeat: no-repeat;
+    display: block;
+    width: 120px;
+    height: 53px;
+    text-indent: -9999px;
+    margin: 0;
+}

@@ -19,7 +19,8 @@ body {
 }
 
 .cabecalho{
-    background: #ebdfdf;
+    background: #fff;
+    padding: 15px;
 }
 
 .logo{
@@ -30,4 +31,166 @@ body {
     height: 53px;
     text-indent: -9999px;
     margin: 0;
+}
+
+.menu-principal__btn {
+    display: block;
+    width: 50px;
+    height: 50px;
+    text-indent: -9999px;
+    background-color: #fff;
+    background-image: url(../img/menuprincipal-btn-bg.png);
+    background-repeat: no-repeat;
+    background-position: 5px 5px;
+    border-color: #c4c4c4;
+    border-style: solid;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+
+}
+
+.menu-principal__btn--fechar{
+    background-position: -48px 7px;
+}
+
+.menu-principal__lista {
+    padding: 0;
+}
+
+.menu-principal__lista li {
+    list-style: none;
+}
+
+.menu-principal__item {
+    display: block;
+    text-decoration: none;
+    font-weight: bold;
+    color: #343434;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.menu-principal__item--atual {
+    color: #f44242;
+}
+
+/*   etpaca 6*/
+
+.rodape {
+    color: #fff;
+}
+
+.rodape_linha-1 {
+    background-color: #272525;
+    background-image: url("../img/fundo.jpg");
+    background-size: cover;
+    padding: 15px;
+}
+
+.rodape_linha-2 {
+    background-color: #000;
+    text-align: center;
+    padding: 15px;
+}
+
+.rodape_titulo {
+    border-bottom: 1px solid #fff;
+    padding: 0 10px 10px 10px;
+    font-size: 18px;
+}
+
+.rodape_lista-links {
+    padding: 0;
+    list-style: none;
+}
+
+.rodape_lista-links_item {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.rodape_lista-links_item::before {
+    content: '>';
+    margin-right: 8px;
+    color: #f44242;
+}
+
+.rodape__coluna {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+/*Etapa 8*/
+.pagina-cabecalho {
+    background-color: #dd3f3f;
+    background-image: url(../img/cabecalho-pagina-bg.jpg);
+    background-attachment: fixed;
+    color: #fff;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.pagina-cabecalho_titulo {
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.pagina-cabecalho_titulo::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #fff;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+/*etapa 9*/
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.pagina-conteudo {
+    padding: 15px;
+    padding-top: 20px;
+    padding-bottom: 25px;
+}
+
+.pagina-conteudo p {
+    color: #3a3a3a;
+    line-height: 22px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* etapa 10 */
+
+.lista-tematicas {
+    padding: 0;
+}
+
+.lista-tematicas_item {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.lista-tematicas_item a {
+    text-decoration: none;
+}
+
+.lista-tematicas_titulo {
+    color: #000;
+    font-size: 18px;
+    margin-left: 15px;
+    border-left: 1px solid #000;
 }

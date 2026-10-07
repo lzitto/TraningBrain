@@ -87,7 +87,7 @@ public class DlzittoPlayground {
 
                 System.out.println("\nComparando:");
                 System.out.println(array[j] + " e " + array[j + 1]);
-
+                    
                 if (array[j] > array[j + 1]) {
 
                     System.out.println("SWAP!");

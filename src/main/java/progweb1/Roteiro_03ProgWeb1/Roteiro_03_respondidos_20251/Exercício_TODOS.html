@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Exercício 01</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+
+        // --- funcao ex 01 
+        function calcularQuadrados() {
+            var numeros = document.getElementById("txtNumeros1").value;
+            numeros = numeros.split(",");
+            for (i = 0; i < numeros.length; i++) {
+                quadrado = parseInt(numeros[i]) * parseInt(numeros[i]);
+                document.write("O quadrado de " + numeros[i] + " é " + quadrado + "<br>");
+            }
+        }
+        // -- Funcao ex 02
+        function verificarMaior() {
+            var numeros = document.getElementById("txtNumeros2").value;
+            numeros = numeros.split(",");
+            var maior = parseInt(numeros[0]);
+            for (i = 1; i < numeros.length; i++) {
+                if (parseInt(numeros[i]) > maior) {
+                    maior = parseInt(numeros[i]);
+                }
+            }
+            alert("O maior número digitado é: " + maior);
+        }
+
+        // --funcao ex 03
+        function verificarIdadesMaiorMenor18() {
+            var idades = document.getElementById("txtIdades").value;
+            idades = idades.split(",");
+            var maior18 = 0;
+            var menor18 = 0;
+            for (i = 0; i < idades.length; i++) {
+                if (parseInt(idades[i]) >= 18)
+                    maior18++;
+                else
+                    menor18++;
+            }
+            document.write("Quantidade de maiores: " + maior18 + "; e menores: " + menor18);
+        }
+
+        // -- funcao ex 04 
+        function separarDiaMesAno() {
+            var data = document.getElementById("txtData").value;
+            data = data.split("/");
+            document.write("O dia é: " + data[0] + "<br>");
+            document.write("O mês é: " + data[1] + "<br>");
+            document.write("O ano é: " + data[2] + "<br>");
+        }
+
+        // -- funcao 05
+
+        function inverterTexto() {
+            var texto = document.getElementById("txt").value;
+            var textoAux = '';
+            for (var i = texto.length - 1; i >= 0; i--) {
+                textoAux += texto[i];
+            }
+            document.write("String invertida: " + textoAux);
+        }
+
+        // ===== Exercício 06 =====
+        function ordenarLista(){
+            var numeros = document.getElementById("txtOrdenar").value;
+            numeros = numeros.split(",");
+            for (var i = 0; i < numeros.length; i++){
+                numeros[i] = parseInt(numeros[i]);
+            }
+            // sem a função de comparação, o sort() ordena como texto ([10, 9, 1] viraria [1, 10, 9])
+            numeros.sort(function(a, b){
+                return a - b;
+            });
+            document.getElementById("resultado6").innerHTML = "Lista ordenada: " + numeros.join(", ");
+        }
+
+        // ===== Exercício 07 =====
+        function somarImparesMultiplosDeTres(){
+            var numeros = document.getElementById("txtSoma").value;
+            numeros = numeros.split(",");
+            var soma = 0;
+            for (var i = 0; i < numeros.length; i++){
+                var n = parseInt(numeros[i]);
+                // !== 0 porque em JS o resto de um negativo ímpar é -1 (ex: -9 % 2)
+                if (n % 2 !== 0 && n % 3 === 0){
+                    soma += n;
+                }
+            }
+            document.getElementById("resultado7").innerHTML = "A soma dos ímpares múltiplos de 3 é: " + soma;
+        }
+
+        // ===== Exercício 08 =====
+        function calcularFatorial(n){
+            var fatorial = 1;
+            for (var i = 2; i <= n; i++){
+                fatorial = fatorial * i;
+            }
+            return fatorial;
+        }
+
+        function fatorialDaLista(){
+            var numeros = document.getElementById("txtFatorial").value;
+            numeros = numeros.split(",");
+            var saida = "";
+            for (var i = 0; i < numeros.length; i++){
+                var n = parseInt(numeros[i]);
+                if (n < 0){
+                    saida += "O fatorial de " + n + " não existe (número negativo)<br>";
+                } else if (n > 18){
+                    // acima de 18! o Number perde precisão (passa de 2^53)
+                    saida += "O fatorial de " + n + " é aproximadamente " + calcularFatorial(n) + "<br>";
+                } else {
+                    saida += "O fatorial de " + n + " é " + calcularFatorial(n) + "<br>";
+                }
+            }
+            document.getElementById("resultado8").innerHTML = saida;
+        }
+
+         // ----- Exercício 09 -----
+        function analisarValores(){
+            var numeros = document.getElementById("txtValores").value;
+            numeros = numeros.split(",");
+            var soma = 0;
+            var positivos = 0;
+            var negativos = 0;
+            for (var i = 0; i < numeros.length; i++){
+                var n = parseInt(numeros[i]);
+                soma += n;
+                if (n > 0){
+                    positivos++;
+                } else if (n < 0){
+                    negativos++;
+                }
+            }
+            var media = soma / numeros.length;
+        
+            var percPositivos = positivos / numeros.length * 100;
+            var percNegativos = negativos / numeros.length * 100;
+            document.getElementById("resultado9").innerHTML = "Média aritmética: " + media.toFixed(2) + "<br>" +
+                "Quantidade de positivos: " + positivos + "<br>" +
+                "Quantidade de negativos: " + negativos + "<br>" +
+                "Percentual de positivos: " + percPositivos.toFixed(1) + "%<br>" +
+                "Percentual de negativos: " + percNegativos.toFixed(1) + "%";
+        }
+
+         // ----- Exercício 10 -----
+        function inverterLista(){
+            var numeros = document.getElementById("txtInverter").value;
+            numeros = numeros.split(",");
+            var invertida = [];
+            for (var i = numeros.length - 1; i >= 0; i--){
+                invertida.push(parseInt(numeros[i]));
+            }
+            document.getElementById("resultado10").innerHTML = "Lista invertida: [" + invertida.join(", ") + "]";
+        }
+
+        // -------- Exercício 11 - Monitor de Temperaturas -------
+        const temperaturas = [];
+
+        function adicionarTemperatura() {
+            const input = document.getElementById('temperatura');
+            const valor = parseFloat(input.value);
+
+            if (isNaN(valor)) {
+                alert("Por favor, insira um número válido.");
+                return;
+            }
+
+            temperaturas.push(valor);
+
+            const lista = document.getElementById('listaTemperaturas');
+            const item = document.createElement('li');
+            item.textContent = valor + " °C";
+            lista.appendChild(item);
+
+            input.value = "";
+            input.focus();
+        }
+
+        // 11-A: média das temperaturas
+        function calcularMedia() {
+            if (temperaturas.length === 0) {
+                alert("Nenhuma temperatura foi inserida.");
+                return;
+            }
+
+            var soma = 0;
+            for (var i = 0; i < temperaturas.length; i++) {
+                soma += temperaturas[i];
+            }
+            var media = soma / temperaturas.length;
+
+            let mensagem;
+            if (media > 30) {
+                mensagem = "A semana está quente! 🔥";
+            } else if (media >= 20 && media <= 30) {
+                mensagem = "Temperatura amena. 🌤️";
+            } else {
+                mensagem = "Semana fria! ❄️";
+            }
+
+            const resultado = document.getElementById('resultado');
+            resultado.innerHTML = `
+                <p>Média das temperaturas: <strong>${media.toFixed(2)} °C</strong></p>
+                <div class="alerta">${mensagem}</div>
+            `;
+        }
+
+        // 11-B: média móvel de 3 em 3 dias nos últimos 10 dias
+        function calcularMediaMovel() {
+            var dias = temperaturas.slice(-10);
+            if (dias.length < 3) {
+                alert("Insira pelo menos 3 temperaturas.");
+                return;
+            }
+            var saida = "<p>Média móvel (3 em 3 dias):</p>";
+            for (var i = 0; i + 3 <= dias.length; i++) {
+                var media = (dias[i] + dias[i + 1] + dias[i + 2]) / 3;
+                saida += "<p>Dias " + (i + 1) + " a " + (i + 3) + ": " + media.toFixed(2) + " °C</p>";
+            }
+            document.getElementById('resultado').innerHTML = saida;
+        }
+
+        // 11-C: tendência nos últimos 7 dias
+        function detectarTendencia() {
+            if (temperaturas.length < 7) {
+                alert("Insira pelo menos 7 temperaturas.");
+                return;
+            }
+            var ultimos = temperaturas.slice(-7);
+            var crescente = true;
+            var decrescente = true;
+            for (var i = 1; i < ultimos.length; i++) {
+                if (ultimos[i] <= ultimos[i - 1]) {
+                    crescente = false;
+                }
+                if (ultimos[i] >= ultimos[i - 1]) {
+                    decrescente = false;
+                }
+            }
+            var mensagem;
+            if (crescente) {
+                mensagem = "Tendência de AQUECIMENTO 🔥";
+            } else if (decrescente) {
+                mensagem = "Tendência de RESFRIAMENTO ❄️";
+            } else {
+                mensagem = "Temperaturas INSTÁVEIS, sem padrão claro ⚠️";
+            }
+            document.getElementById('resultado').innerHTML = "<p>Últimos 7 dias: " + ultimos.join(" → ") + " °C</p>" +
+                '<div class="alerta">' + mensagem + "</div>";
+        }
+
+        // 11-D: 3 ou mais dias seguidos acima de 35 °C ou abaixo de 5 °C
+        function alertaExtremo() {
+            if (temperaturas.length < 3) {
+                alert("Insira pelo menos 3 temperaturas.");
+                return;
+            }
+            var seqQuente = 0;
+            var seqFrio = 0;
+            var houveCalor = false;
+            var houveFrio = false;
+            for (var i = 0; i < temperaturas.length; i++) {
+                if (temperaturas[i] > 35) {
+                    seqQuente++;
+                } else {
+                    seqQuente = 0;
+                }
+                if (temperaturas[i] < 5) {
+                    seqFrio++;
+                } else {
+                    seqFrio = 0;
+                }
+                if (seqQuente >= 3) {
+                    houveCalor = true;
+                }
+                if (seqFrio >= 3) {
+                    houveFrio = true;
+                }
+            }
+            var mensagem = "";
+            if (houveCalor) {
+                mensagem += "🔥 Alerta: 3 ou mais dias seguidos acima de 35 °C.<br>";
+            }
+            if (houveFrio) {
+                mensagem += "🥶 Alerta: 3 ou mais dias seguidos abaixo de 5 °C.<br>";
+            }
+            if (mensagem === "") {
+                mensagem = "Nenhuma sequência de temperatura extrema encontrada.";
+            }
+            document.getElementById('resultado').innerHTML = '<div class="alerta">' + mensagem + "</div>";
+        }
+    </script>
+
+</head>
+
+<body>
+    <h2>Exercício 01</h2>
+    Números: <input type="text" id="txtNumeros1">
+    <input type="button" value="Calcular Quadrados!" onclick="calcularQuadrados()">
+
+    <hr>
+    <h2>Exercício 02</h2>
+    Números: <input type="text" id="txtNumeros2">
+    <input type="button" value="Qual é o maior número?" onclick="verificarMaior()">
+
+    <hr>
+    <h2>Exercício 03</h2>
+    Números: <input type="text" id="txtIdades">
+    <input type="button" value="Somar maiores e menores que 18 anos" onclick="verificarIdadesMaiorMenor18()">
+
+    <hr>
+    <h2> Exercício 04</h2>
+    Data: <input type="text" id="txtData">
+    <input type="button" value="Separar dia, mês e ano." onclick="separarDiaMesAno()">
+
+    <hr>
+    <h2> Exercício 05 </h2>
+    Texto: <input type="text" id="txt">
+    <input type="button" value="Inverter texto" onclick="inverterTexto()">
+
+    <hr>
+    <h2>Exercício 06</h2>
+    Números: <input type="text" id="txtOrdenar">
+    <input type="button" value="Ordenar lista" onclick="ordenarLista()">
+    <div id="resultado6"></div>
+
+    <hr>
+    <h2>Exercício 07</h2>
+    Números: <input type="text" id="txtSoma">
+    <input type="button" value="Somar ímpares múltiplos de 3" onclick="somarImparesMultiplosDeTres()">
+    <div id="resultado7"></div>
+
+    <hr>
+    <h2>Exercício 08</h2>
+    Números: <input type="text" id="txtFatorial">
+    <input type="button" value="Calcular fatoriais" onclick="fatorialDaLista()">
+    <div id="resultado8"></div>
+
+    <hr>
+    <h2>Exercício 09</h2>
+    Números: <input type="text" id="txtValores">
+    <input type="button" value="Analisar valores" onclick="analisarValores()">
+    <div id="resultado9"></div>
+
+    <hr>
+    <h2>Exercício 10</h2>
+    Números: <input type="text" id="txtInverter">
+    <input type="button" value="Inverter lista" onclick="inverterLista()">
+    <div id="resultado10"></div>
+
+    <hr>
+    <h2>Exercício 11 - Monitor de Temperaturas Semanais</h2>
+    <label for="temperatura">Digite a temperatura (°C):</label><br>
+    <input type="number" id="temperatura" step="0.1">
+    <button onclick="adicionarTemperatura()">Adicionar Temperatura</button><br>
+
+    <h3>Temperaturas Inseridas:</h3>
+    <ul id="listaTemperaturas"></ul>
+
+    <button onclick="calcularMedia()">Calcular Média</button>
+    <button onclick="calcularMediaMovel()">Média Móvel</button>
+    <button onclick="detectarTendencia()">Detectar Tendência</button>
+    <button onclick="alertaExtremo()">Alerta de Temperatura Extrema</button>
+
+    <div id="resultado"></div>
+</body>
+
+</html>

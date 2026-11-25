@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercício 07 - Roteiro V</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        // Mesmas funções do exercício 06, agora com async/await
+        // (o enunciado refere-se às funções com promises — questão 06)
+
+        const colocarTodasLetrasEmMaiusculoEm500ms = (texto) => {
+            return new Promise((resolve, reject) => {
+                if (typeof texto !== "string") {
+                    reject(`Erro: o parâmetro "${texto}" não é do tipo String`);
+                    return;
+                }
+                setTimeout(() => {
+                    resolve(texto.toUpperCase());
+                }, 500);
+            });
+        };
+
+        const inverteTodasLetras = (texto) => {
+            return new Promise((resolve, reject) => {
+                if (typeof texto !== "string") {
+                    reject(`Erro: o parâmetro não é do tipo String`);
+                    return;
+                }
+                resolve(texto.split("").reverse().join(""));
+            });
+        };
+
+        // async/await: substitui o encadeamento de .then()/.catch()
+        // por um código que parece síncrono, mas espera cada Promise
+        const processarTexto = async (texto) => {
+            try {
+                const maiusculo = await colocarTodasLetrasEmMaiusculoEm500ms(texto);
+                console.log("Maiúsculo:", maiusculo);
+
+                const invertido = await inverteTodasLetras(maiusculo);
+                console.log("Invertido:", invertido);
+            } catch (erro) {
+                console.log(erro);
+            }
+        };
+
+        processarTexto("hello world");
+        processarTexto(123);
+    </script>
+</head>
+<body>
+    <h2>Exercício 07 - async/await (transformação do ex. 06)</h2>
+    <p>Abra o console do navegador (F12) — a saída aparece após ~500ms.</p>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercício 01 - Roteiro IV</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        const vendas = [
+            { produto: "Notebook", preco: 4500, quantidade: 3, vendedor: "Sara" },
+            { produto: "Smartphone", preco: 2300, quantidade: 5, vendedor: "Matheus" },
+            { produto: "Monitor", preco: 1200, quantidade: 2, vendedor: "Gabriel" },
+            { produto: "Teclado Mecânico", preco: 350, quantidade: 4, vendedor: "Sara" },
+            { produto: "Notebook", preco: 4500, quantidade: 6, vendedor: "Gabriel" },
+            { produto: "Monitor", preco: 1200, quantidade: 3, vendedor: "Matheus" }
+        ];
+
+        const formatarMoeda = (valor) => new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(valor);
+
+        const gerarRelatorio = (vendas) => {
+            let relatorio = "Relatório de Vendas:\n\n";
+            let totalGeral = 0;
+            const comissoes = {};
+
+            vendas.forEach(v => {
+                const total = v.preco * v.quantidade;
+                totalGeral += total;
+                comissoes[v.vendedor] = (comissoes[v.vendedor] || 0) + total;
+
+                relatorio += `- Produto: ${v.produto}\n`;
+                relatorio += `  Quantidade: ${v.quantidade}\n`;
+                relatorio += `  Preço Unitário: ${formatarMoeda(v.preco)}\n`;
+                relatorio += `  Total: ${formatarMoeda(total)}\n`;
+                relatorio += `  Vendedor: ${v.vendedor}\n\n`;
+            });
+
+            relatorio += `Total Geral: ${formatarMoeda(totalGeral)}\n\n`;
+            relatorio += `Total de comissão (5%):\n`;
+
+            for (const vendedor in comissoes) {
+                relatorio += `${vendedor}: ${formatarMoeda(comissoes[vendedor] * 0.05)}\n`;
+            }
+
+            return relatorio;
+        };
+
+        function exibirRelatorio() {
+            document.getElementById("saida").textContent = gerarRelatorio(vendas);
+        }
+    </script>
+</head>
+<body>
+    <h2>Exercício 01 - Relatório de Vendas</h2>
+    <button onclick="exibirRelatorio()">Gerar Relatório</button>
+    <pre id="saida"></pre>
+</body>
+</html>

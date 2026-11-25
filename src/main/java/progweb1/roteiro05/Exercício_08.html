@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercício 08 - Roteiro V</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        // ============================================================
+        // Para TESTAR agora: mock server local (node mockServer.js)
+        // Para a ENTREGA: troque pela URL do SEU projeto no mockapi.io
+        // ============================================================
+        const BASE_URL = "http://localhost:3000/produtos";
+        // const BASE_URL = "https://SEU-PROJETO.mockapi.io/produtos";
+
+        // ----------------------------------------------------------
+        // Etapa 1: função separada para BUSCAR produtos (GET)
+        // async/await + try...catch para tratamento de erros
+        // ----------------------------------------------------------
+        const buscarProdutos = async () => {
+            try {
+                const resposta = await fetch(`${BASE_URL}`);
+                if (!resposta.ok) {
+                    throw new Error(`Erro na requisição: ${resposta.status}`);
+                }
+                const produtos = await resposta.json();
+                return produtos;
+            } catch (erro) {
+                console.log(erro.message);
+                return [];
+            }
+        };
+
+        // ----------------------------------------------------------
+        // Etapa 2: função separada para CADASTRAR produto (POST)
+        // Enviamos o objeto como JSON no corpo da requisição
+        // ----------------------------------------------------------
+        const cadastrarProduto = async (produto) => {
+            try {
+                const resposta = await fetch(`${BASE_URL}`, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(produto)
+                });
+                if (!resposta.ok) {
+                    throw new Error(`Erro na requisição: ${resposta.status}`);
+                }
+                const produtoCriado = await resposta.json();
+                return produtoCriado;
+            } catch (erro) {
+                console.log(erro.message);
+                return null;
+            }
+        };
+
+        // ----------------------------------------------------------
+        // Etapa 3: fluxo principal — busca, exibe, cadastra e confirma
+        // ----------------------------------------------------------
+        const executar = async () => {
+            // Busca a lista de produtos e exibe formatada no console
+            const produtos = await buscarProdutos();
+            produtos.forEach((p) => {
+                console.log(`Produto: ${p.nome} | Preço: R$ ${p.preco}`);
+            });
+
+            // Novo produto a ser cadastrado
+            const novoProduto = {
+                nome: "Headset",
+                preco: 250.00
+            };
+
+            // Cadastra o produto e recebe a resposta da API
+            const produtoCriado = await cadastrarProduto(novoProduto);
+
+            // Confirmação da criação no formato pedido
+            if (produtoCriado) {
+                console.log(`Produto "${produtoCriado.nome}" criado com sucesso! Status: ${produtoCriado.status}`);
+            }
+        };
+
+        executar();
+    </script>
+</head>
+<body>
+    <h2>Exercício 08 - Integração com mockAPI (GET/POST)</h2>
+    <p>
+        <strong>Teste local:</strong> rode <code>node mockServer.js</code> e abra este HTML —
+        o código já aponta para <code>localhost:3000</code>.
+    </p>
+    <p>
+        <strong>Para a entrega:</strong> crie seu projeto em
+        <a href="https://mockapi.io/" target="_blank">mockapi.io</a>,
+        adicione o endpoint <code>/produtos</code>, descomente a segunda <code>BASE_URL</code>
+        no código e comente a local.
+    </p>
+    <p>Abra o console do navegador (F12) para ver a saída.</p>
+</body>
+</html>

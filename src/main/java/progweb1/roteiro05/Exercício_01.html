@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercício 01 - Roteiro V</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        // Função assíncrona que simula uma requisição ao servidor
+        // Promise + setTimeout: o setTimeout atrasa a "resposta", a Promise
+        // representa o valor (sucesso) ou o erro (falha) que chegará depois
+        const requisicaoServidor = (url) => {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    if (url) {
+                        resolve(`Resposta recebida de: ${url}`);
+                    } else {
+                        reject("Erro: URL não informada");
+                    }
+                }, 2000); // simula 2 segundos de latência
+            });
+        };
+
+        // Arrow function assíncrona que consome a Promise com await
+        const executarRequisicao = async (url) => {
+            try {
+                const resposta = await requisicaoServidor(url);
+                console.log(resposta);
+            } catch (erro) {
+                console.log(erro);
+            }
+        };
+
+        executarRequisicao("https://api.exemplo.com/produtos");
+    </script>
+</head>
+<body>
+    <h2>Exercício 01 - Promise + setTimeout (Requisição simulada)</h2>
+    <p>Abra o console do navegador (F12) — a resposta aparece após ~2 segundos.</p>
+</body>
+</html>

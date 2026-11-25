@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercício 05 - Roteiro IV</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        const exportacao = {
+            paisDestino: "Estados Unidos",
+            produto: {
+                nome: "aço",
+                valorEmDolares: 100000,
+                taxaImposta: 0.25
+            },
+            empresa: "Siderúrgica Brasil Ltda"
+        };
+
+        // Desestruturação aninhada
+        const { produto: { nome, valorEmDolares, taxaImposta }, empresa } = exportacao;
+
+        // Valor final com a taxa aplicada
+        const valorFinal = valorEmDolares + (valorEmDolares * taxaImposta);
+
+        const saida = `Produto: ${nome}
+Empresa: ${empresa}
+Valor original: US$ ${valorEmDolares}
+Taxa: ${taxaImposta * 100}%
+Valor com tarifa: US$ ${valorFinal}`;
+
+        function exibir() {
+            document.getElementById("saida").textContent = saida;
+        }
+    </script>
+</head>
+<body>
+    <h2>Exercício 05 - Desestruturação e Tarifa</h2>
+    <button onclick="exibir()">Exibir Resultado</button>
+    <pre id="saida"></pre>
+</body>
+</html>

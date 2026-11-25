@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercício 03 - Roteiro IV</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        const usuarios = [
+            { nome: "Cleciana", idade: "25", ativo: "true", saldo: "1234.56" },
+            { nome: "Gustavo", idade: 30, ativo: true, saldo: 980 },
+            { nome: "Rayane", idade: null, ativo: "false", saldo: "1500.90" },
+            { nome: "Igor", idade: "NaN", ativo: 1, saldo: undefined },
+            { nome: "Samuel", idade: "22 anos", ativo: false, saldo: "0" }
+        ];
+
+        const normalizarUsuario = (usuario) => {
+            // 1. idade: número inteiro ou null
+            let idade = null;
+            if (usuario.idade !== null && usuario.idade !== undefined && usuario.idade !== "") {
+                const n = Number(usuario.idade);
+                if (!isNaN(n) && isFinite(n)) {
+                    idade = Math.trunc(n);
+                }
+            }
+
+            // 2. ativo: booleano
+            const ativo = usuario.ativo === true || usuario.ativo === "true" || usuario.ativo === 1;
+
+            // 3. saldo: número com duas casas decimais
+            let saldo = 0;
+            if (usuario.saldo !== undefined && usuario.saldo !== null && usuario.saldo !== "") {
+                const n = Number(usuario.saldo);
+                if (!isNaN(n) && isFinite(n)) {
+                    saldo = Number(n.toFixed(2));
+                }
+            }
+
+            return { nome: usuario.nome, idade, ativo, saldo };
+        };
+
+        const processarUsuario = (lista) => {
+            const resultado = lista.map(normalizarUsuario);
+            console.log(resultado);
+            return resultado;
+        };
+
+        function exibirResultados() {
+            const resultado = processarUsuario(usuarios);
+            document.getElementById("saida").textContent = JSON.stringify(resultado, null, 2);
+        }
+    </script>
+</head>
+<body>
+    <h2>Exercício 03 - Normalizar Usuários</h2>
+    <button onclick="exibirResultados()">Processar Usuários</button>
+    <pre id="saida"></pre>
+</body>
+</html>

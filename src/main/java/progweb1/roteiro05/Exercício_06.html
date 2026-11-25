@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercício 06 - Roteiro V</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        // Função 1: valida o tipo e coloca em maiúsculo após 500ms
+        const colocarTodasLetrasEmMaiusculoEm500ms = (texto) => {
+            return new Promise((resolve, reject) => {
+                // Verifica se o parâmetro é String
+                if (typeof texto !== "string") {
+                    reject(`Erro: o parâmetro "${texto}" não é do tipo String`);
+                    return;
+                }
+
+                setTimeout(() => {
+                    resolve(texto.toUpperCase());
+                }, 500);
+            });
+        };
+
+        // Função 2: inverte as letras da String
+        const inverteTodasLetras = (texto) => {
+            return new Promise((resolve, reject) => {
+                if (typeof texto !== "string") {
+                    reject(`Erro: o parâmetro não é do tipo String`);
+                    return;
+                }
+                resolve(texto.split("").reverse().join(""));
+            });
+        };
+
+        // Encadeamento: .then() da primeira Promise alimenta a segunda
+        colocarTodasLetrasEmMaiusculoEm500ms("hello world")
+            .then((maiusculo) => {
+                console.log("Maiúsculo:", maiusculo); // HELLO WORLD
+                return inverteTodasLetras(maiusculo);
+            })
+            .then((invertido) => {
+                console.log("Invertido:", invertido); // DLROW OLLEH
+            })
+            .catch((erro) => {
+                console.log(erro);
+            });
+
+        // Caso de erro: parâmetro não é String
+        colocarTodasLetrasEmMaiusculoEm500ms(123)
+            .then((resultado) => console.log(resultado))
+            .catch((erro) => console.log(erro));
+    </script>
+</head>
+<body>
+    <h2>Exercício 06 - Promises com encadeamento</h2>
+    <p>Abra o console do navegador (F12) — a saída aparece após ~500ms.</p>
+</body>
+</html>

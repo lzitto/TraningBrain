@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercício 05 - Roteiro V</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        const frases = [
+            "JavaScript é poderoso!",
+            "Callbacks são úteis.",
+            "Arrow functions são mais curtas."
+        ];
+
+        // analisarTexto recebe o array e uma callback:
+        // ela não decide o que fazer, apenas "delega" a operação
+        // para a callback que foi passada
+        const analisarTexto = (array, callback) => {
+            return callback(array);
+        };
+
+        // Callback que conta o total de palavras em todas as frases
+        const contarPalavras = (array) => {
+            // reduce acumula a soma das palavras de cada frase
+            return array.reduce((total, frase) => {
+                return total + frase.split(" ").length;
+            }, 0);
+        };
+
+        // Callback que encontra a frase com mais palavras
+        const maiorFrase = (array) => {
+            // reduce compara e guarda sempre a frase com mais palavras
+            return array.reduce((maior, frase) => {
+                return frase.split(" ").length > maior.split(" ").length ? frase : maior;
+            });
+        };
+
+        console.log(analisarTexto(frases, contarPalavras)); // 9
+        console.log(analisarTexto(frases, maiorFrase));     // "Arrow functions são mais curtas."
+    </script>
+</head>
+<body>
+    <h2>Exercício 05 - analisarTexto com callbacks</h2>
+    <p>Abra o console do navegador (F12) para ver as saídas.</p>
+</body>
+</html>

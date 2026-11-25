@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercício 02 - Roteiro V</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        // Rest (...) reúne todos os parâmetros recebidos em um array
+        const verificarIguais = (...parametros) => {
+            // Callback: percorre o array e verifica se existe
+            // algum parâmetro com mesmo tipo e valor do primeiro
+            const existeRepetido = parametros.filter((valor, indice) => {
+                return parametros.filter((outro) => {
+                    return typeof outro === typeof valor && outro === valor;
+                }).length > 1;
+            }).length > 0;
+
+            return existeRepetido;
+        };
+
+        console.log(verificarIguais(1, 2, 3));           // false
+        console.log(verificarIguais(1, 2, 1));           // true
+        console.log(verificarIguais("a", "b", "a"));     // true
+        console.log(verificarIguais(1, "1", 2));         // false (tipos diferentes)
+        console.log(verificarIguais(5, 5, 5));           // true
+    </script>
+</head>
+<body>
+    <h2>Exercício 02 - Rest + Verificação de parâmetros iguais</h2>
+    <p>Abra o console do navegador (F12) para ver as saídas.</p>
+</body>
+</html>

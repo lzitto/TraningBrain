@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercício 03 - Roteiro IV B2</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        const clima = {
+            cidade: "Campina Grande",
+            estado: "Paraíba",
+            temperatura: {
+                atual: 28,
+                minima: 22,
+                maxima: 31
+            },
+            condicao: "Parcialmente nublado",
+            umidade: 75
+        };
+
+        // Arrow Function
+        const gerarResumo = (clima) => {
+            // Desestruturação de objetos aninhados
+            const { cidade, estado, temperatura: { atual, minima, maxima }, condicao } = clima;
+
+            // Template String
+            return `${cidade} - ${estado} | Temperatura: ${atual}°C (mínima: ${minima}°C, máxima: ${maxima}°C) | Condição: ${condicao}`;
+        };
+
+        const resultado = gerarResumo(clima);
+
+        console.log(resultado);
+    </script>
+</head>
+<body>
+    <h2>Exercício 03 - Monitoramento Climático</h2>
+    <p>Abra o console do navegador (F12) para ver a saída.</p>
+</body>
+</html>

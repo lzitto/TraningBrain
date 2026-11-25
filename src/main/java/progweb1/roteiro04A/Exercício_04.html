@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercício 04 - Roteiro IV</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        // Função de callback para somatório
+        const somar = (acumulador, valor) => acumulador + valor;
+
+        const somarCincoPares = (x) => {
+            // Encontra o primeiro par >= x
+            let inicio = (x % 2 === 0) ? x : x + 1;
+
+            // Gera os 5 pares consecutivos
+            const pares = [];
+            for (let i = 0; i < 5; i++) {
+                pares.push(inicio + i * 2);
+            }
+
+            // Somatório usando callback
+            const total = pares.reduce(somar, 0);
+            return total;
+        };
+
+        function calcular() {
+            const x = parseInt(document.getElementById("txtX").value);
+            const resultado = somarCincoPares(x);
+            document.getElementById("saida").textContent = `Entrada: ${x} => Saída: ${resultado}`;
+        }
+    </script>
+</head>
+<body>
+    <h2>Exercício 04 - Soma de 5 Pares Consecutivos</h2>
+    <label>X: <input type="number" id="txtX" value="4"></label>
+    <button onclick="calcular()">Calcular</button>
+    <pre id="saida"></pre>
+</body>
+</html>

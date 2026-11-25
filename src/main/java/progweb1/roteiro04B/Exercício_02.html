@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercício 02 - Roteiro IV B2</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        const vendas = [150.50, 230.00, 89.90, 420.00, 110.50];
+
+        // Arrow Function
+        const calcularTotal = (vendas) => {
+            // Desestruturação de array: primeira e última venda
+            const [primeira, ...resto] = vendas;
+            const ultima = resto[resto.length - 1];
+
+            // reduce() para calcular o total
+            const total = vendas.reduce((acumulador, venda) => acumulador + venda, 0);
+
+            // Template String
+            return `Primeira venda: R$ ${primeira} | Última venda: R$ ${ultima} | Total arrecadado: R$ ${total}`;
+        };
+
+        const resultado = calcularTotal(vendas);
+
+        console.log(resultado);
+    </script>
+</head>
+<body>
+    <h2>Exercício 02 - Loja Virtual</h2>
+    <p>Abra o console do navegador (F12) para ver a saída.</p>
+</body>
+</html>

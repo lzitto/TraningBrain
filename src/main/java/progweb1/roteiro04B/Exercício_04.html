@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercício 04 - Roteiro IV B2</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        const classificacao = [
+            ["Ana", 950],
+            ["Carlos", 890],
+            ["Mariana", 870]
+        ];
+
+        // map: desestruturação de arrays + Arrow Function para processar cada resultado
+        const resultado = classificacao.map((participante, indice) => {
+            const [nome, pontos] = participante;
+            const lugar = indice + 1;
+            return `${lugar}º lugar: ${nome} - ${pontos} pontos`;
+        });
+
+        // forEach: Arrow Function para apresentar cada resultado
+        resultado.forEach((linha) => {
+            console.log(linha);
+        });
+    </script>
+</head>
+<body>
+    <h2>Exercício 04 - Competição de Programação</h2>
+    <p>Abra o console do navegador (F12) para ver a saída.</p>
+</body>
+</html>

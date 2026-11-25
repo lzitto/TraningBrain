@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercício 03 - Roteiro V</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        // Callback que combina dois objetos com spread e retorna o resultado
+        const combinarObjetos = (obj1, obj2, callback) => {
+            // Spread (...) copia as propriedades de cada objeto
+            // para dentro de um novo objeto
+            const combinado = { ...obj1, ...obj2 };
+            return callback(combinado);
+        };
+
+        const exibir = (objeto) => {
+            console.log(objeto);
+        };
+
+        const pessoa1 = { nome: "Ana", idade: 25 };
+        const pessoa2 = { cidade: "Campina Grande", estado: "PB" };
+
+        combinarObjetos(pessoa1, pessoa2, exibir);
+        // { nome: "Ana", idade: 25, cidade: "Campina Grande", estado: "PB" }
+    </script>
+</head>
+<body>
+    <h2>Exercício 03 - Spread para combinar objetos</h2>
+    <p>Abra o console do navegador (F12) para ver a saída.</p>
+</body>
+</html>

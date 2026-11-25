@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercício 01 - Roteiro IV B2</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        const personagem = {
+            nome: "Aragorn",
+            classe: "Guerreiro",
+            atributos: {
+                nivel: 45,
+                vida: 850,
+                mana: 120
+            },
+            localizacao: {
+                cidade: "Minas Tirith",
+                regiao: "Gondor"
+            }
+        };
+
+        // Desestruturação de objetos (inclusive aninhados)
+        const { nome, classe, atributos: { nivel }, localizacao: { cidade, regiao } } = personagem;
+
+        // Template String
+        const resultado = `${nome} é um ${classe} de nível ${nivel} e está em ${cidade}, na região de ${regiao}.`;
+
+        console.log(resultado);
+    </script>
+</head>
+<body>
+    <h2>Exercício 01 - Personagem RPG</h2>
+    <p>Abra o console do navegador (F12) para ver a saída.</p>
+</body>
+</html>
